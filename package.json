@@ -1,0 +1,23 @@
+{
+  "name": "ui-automation-framework",
+  "version": "1.0.0",
+  "description": "in progress",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SDET-resplandor/ui-automation-framework.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/SDET-resplandor/ui-automation-framework/issues"
+  },
+  "homepage": "https://github.com/SDET-resplandor/ui-automation-framework#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "@types/node": "^26.6.4"
+  }
+}
