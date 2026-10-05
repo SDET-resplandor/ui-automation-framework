@@ -4,5 +4,7 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+downloads/*
+!downloads/.gitkeep
 .env
 venv/
