@@ -1,4 +1,4 @@
-import { Page, Locator } from '@playwright/test';
+import { Page, Locator, expect } from '@playwright/test';
 import { BasePage } from './BasePages';
 
 export class CheckoutStepOnePage extends BasePage{
@@ -20,11 +20,17 @@ constructor( page:Page ) {
     this.errorMessage = page.locator('[data-test="error"]');
 }
 async fillUserInformation(firstName: string, lastName: string, postalCode: string) {
-    await this.firstNameInput.waitFor({ state: 'visible' });
+  await expect(this.firstNameInput).toBeVisible();
+
+  await expect(async () => {
     await this.firstNameInput.fill(firstName);
     await this.lastNameInput.fill(lastName);
     await this.postalCodeInput.fill(postalCode);
-    await this.continueButton.waitFor({ state: 'visible' });
-    await this.continueButton.click();
+    await expect(this.firstNameInput).toHaveValue(firstName, { timeout: 1000 });
+    await expect(this.lastNameInput).toHaveValue(lastName, { timeout: 1000 });
+    await expect(this.postalCodeInput).toHaveValue(postalCode, { timeout: 1000 });
+  }).toPass({ timeout: 10000 });
+
+  await this.continueButton.click();
 }
 }

@@ -5,6 +5,7 @@ import { CartPage } from '../Pages/CartPage';
 import { CheckoutStepOnePage } from '../Pages/CheckoutStepOnePage';
 import { CheckoutStepTwoPage } from '../Pages/CheckoutStepTwoPage';
 import {CheckoutCompletePage} from '../Pages/CheckoutCompletePage';
+import { USERS } from '../utils/users';
 
 test.describe('E2E Checkout Flow - Happy Path', () => {
   test('standard_user can complete the full purchase journey and download the order PDF', async ({ page }) => {
@@ -17,7 +18,7 @@ test.describe('E2E Checkout Flow - Happy Path', () => {
 
     await test.step('Log in with valid standard credentials', async () => {
       await loginPage.goto();
-      await loginPage.login('standard_user', 'secret_sauce');
+      await loginPage.loginAs(USERS.standard);
       await expect(page).toHaveURL(/.*inventory.html/);
     });
 

@@ -1,15 +1,16 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../Pages/LoginPage';
 import { ProductsPage } from '../Pages/ProductsPage';
+import { USERS } from '../utils/users';
 
-test('Smoke Test: login exitoso y verificación de ProductsPage', async ({ page }) => {
+test('Smoke test: Successful login and ProductsPage verification', async ({ page }) => {
   const loginPage = new LoginPage(page);
   const productsPage = new ProductsPage(page);
 
   await loginPage.goto();
   
-  // Usamos el método de login que ya agrupa todo
-  await loginPage.login('standard_user', 'secret_sauce');
+  
+  await loginPage.loginAs(USERS.standard);
 
   
   await expect(page).toHaveURL(/.*inventory.html/);

@@ -1,12 +1,13 @@
 import { test, expect } from '@playwright/test';
 import { LoginPage } from '../Pages/LoginPage';
 import { ProductsPage } from '../Pages/ProductsPage';
+import { USERS } from '../utils/users';
 
 test.describe('Product sorting', () => {
   test.beforeEach(async ({ page }) => {
     const loginPage = new LoginPage(page);
     await loginPage.goto();
-    await loginPage.login('standard_user', 'secret_sauce');
+    await loginPage.loginAs(USERS.standard);
   });
 
   test('products can be sorted by price: low to high', async ({ page }) => {
@@ -40,4 +41,15 @@ test.describe('Product sorting', () => {
 
     expect(names).toEqual(sorted);
   });
+
+  test('products can be sorted alphabetically: Z to A', async ({ page }) => {
+  const productsPage = new ProductsPage(page);
+  await productsPage.sortBy('za');
+
+  const names = await page.locator('.inventory_item_name').allTextContents();
+  const sorted = [...names].sort().reverse();
+
+  expect(names).toEqual(sorted);
+});
+
 });

@@ -4,6 +4,7 @@ import { ProductsPage } from '../Pages/ProductsPage';
 import { CartPage } from '../Pages/CartPage';
 import { CheckoutStepOnePage } from '../Pages/CheckoutStepOnePage';
 import { CheckoutDataFactory } from '../utils/CheckoutDataFactory';
+import { USERS } from '../utils/users';
 
 test.describe('Checkout information validation', () => {
   test.beforeEach(async ({ page }) => {
@@ -12,10 +13,11 @@ test.describe('Checkout information validation', () => {
     const cartPage = new CartPage(page);
 
     await loginPage.goto();
-    await loginPage.login('standard_user', 'secret_sauce');
+    await loginPage.loginAs(USERS.standard);
     await productsPage.addProductToCart('sauce-labs-backpack');
     await productsPage.goToCart();
     await cartPage.proceedToCheckout();
+    await expect(page).toHaveURL(/.*checkout-step-one.html/);
   });
 
   const invalidCases = [
