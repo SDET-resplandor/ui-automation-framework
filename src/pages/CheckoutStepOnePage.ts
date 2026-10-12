@@ -1,5 +1,5 @@
 import { Page, Locator, expect } from '@playwright/test';
-import { BasePage } from './BasePages';
+import { BasePage } from './BasePage';
 
 export class CheckoutStepOnePage extends BasePage{
 

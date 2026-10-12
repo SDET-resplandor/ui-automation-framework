@@ -1,5 +1,5 @@
 import { Page, Locator } from '@playwright/test';
-import { BasePage } from './BasePages';
+import { BasePage } from './BasePage';
 
 export class SpinnerCatalogPage extends BasePage {
   readonly items: Locator;

@@ -1,7 +1,4 @@
-export const PASSWORD =
-  (globalThis as typeof globalThis & {
-    process?: { env?: Record<string, string | undefined> };
-  }).process?.env?.SAUCE_PASSWORD ?? 'secret_sauce';
+export const PASSWORD = process.env.SAUCE_PASSWORD ?? 'secret_sauce';
 
 export interface Credentials {
   username: string;

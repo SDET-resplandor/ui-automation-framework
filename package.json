@@ -18,6 +18,6 @@
   "homepage": "https://github.com/SDET-resplandor/ui-automation-framework#readme",
   "devDependencies": {
     "@playwright/test": "^1.63.0",
-    "@types/node": "^26.6.4"
+    "@types/node": "^26.6.5"
   }
 }
