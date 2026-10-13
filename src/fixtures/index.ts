@@ -1,12 +1,13 @@
 import { test as base, expect } from '@playwright/test';
-import { LoginPage } from '../../src/pages/LoginPage';
-import { ProductsPage } from '../../src/pages/ProductsPage';
-import { CartPage } from '../../src/pages/CartPage';
-import { CheckoutStepOnePage } from '../../src/pages/CheckoutStepOnePage';
-import { CheckoutStepTwoPage } from '../../src/pages/CheckoutStepTwoPage';
-import { CheckoutCompletePage } from '../../src/pages/CheckoutCompletePage';
-import { LazyLoadCatalogPage } from '../../src/pages/LazyLoadCatalogPage';
-import { SpinnerCatalogPage } from '../../src/pages/SpinnerCatalogPage';
+import { LoginPage } from '../pages/LoginPage';
+import { ProductsPage } from '../pages/ProductsPage';
+import { CartPage } from '../pages/CartPage';
+import { CheckoutStepOnePage } from '../pages/CheckoutStepOnePage';
+import { CheckoutStepTwoPage } from '../pages/CheckoutStepTwoPage';
+import { CheckoutCompletePage } from '../pages/CheckoutCompletePage';
+import { LazyLoadCatalogPage } from '../pages/LazyLoadCatalogPage';
+import { SpinnerCatalogPage } from '../pages/SpinnerCatalogPage';
+import { NetworkTimingCollector } from '../utils/NetworkTimingCollector';
 
 type Pages = {
   loginPage: LoginPage;
@@ -19,7 +20,20 @@ type Pages = {
   spinnerPage: SpinnerCatalogPage;
 };
 
-export const test = base.extend<Pages>({
+type Monitoring = {
+  networkMetrics: void;
+};
+
+export const test = base.extend<Pages & Monitoring>({
+  networkMetrics: [
+    async ({ page }, use, testInfo) => {
+      const collector = new NetworkTimingCollector(page);
+      await use();
+      await collector.attach(testInfo);
+    },
+    { auto: true },
+  ],
+
   loginPage: async ({ page }, use) => use(new LoginPage(page)),
   productsPage: async ({ page }, use) => use(new ProductsPage(page)),
   cartPage: async ({ page }, use) => use(new CartPage(page)),

@@ -8,3 +8,6 @@ downloads/*
 !downloads/.gitkeep
 .DS_Store
 *.log
+allure-results/
+allure-report/
+performance-report/

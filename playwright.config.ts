@@ -24,8 +24,15 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
-  /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
+ reporter: [
+  ['list'],
+  ['html', { open: 'never' }],
+  ['allure-playwright', {
+    resultsDir: 'allure-results',
+    environmentInfo: { BASE_URL: 'https://www.saucedemo.com', NODE: process.version },
+  }],
+  ['./src/reporters/PerformanceReporter.ts'],
+],
   use: {
     baseURL: 'https://www.saucedemo.com',
     testIdAttribute: 'data-test',

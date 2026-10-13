@@ -11,9 +11,9 @@ export class ProductsPage extends BasePage {
 
 
   readonly sortDropdown = this.page.locator('[data-test="product-sort-container"]');
-  private readonly prices = this.page.locator('.inventory_item_price');
-  private readonly names = this.page.locator('.inventory_item_name');
-  private readonly images = this.page.locator('.inventory_item_img img');
+  readonly prices = this.page.locator('.inventory_item_price');
+  readonly names = this.page.locator('.inventory_item_name');
+  readonly images = this.page.locator('.inventory_item_img img');
 
 
   async addProductToCart(productSlug: string) {
