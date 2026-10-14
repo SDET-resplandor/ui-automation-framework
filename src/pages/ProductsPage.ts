@@ -24,24 +24,8 @@ export class ProductsPage extends BasePage {
     await this.sortDropdown.selectOption(optionValue);
   }
 
-  async openMenu() {
-    await this.menuButton.click();
-  }
-
   async goToCart() {
     await this.cartLink.click();
-  }
-
-  async clickTwitter() {
-    await this.twitterLink.click();
-  }
-
-  async clickFacebook() {
-    await this.facebookLink.click();
-  }
-
-  async clickLinkedin() {
-    await this.linkedinLink.click();
   }
 
   async getPrices(): Promise<number[]> {

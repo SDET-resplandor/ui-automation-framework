@@ -17,7 +17,4 @@ export class LazyLoadCatalogPage extends BasePage {
     return await this.items.count();
   }
 
-  async scrollDown() {
-    await this.page.mouse.wheel(0, 2000);
-  }
 }
