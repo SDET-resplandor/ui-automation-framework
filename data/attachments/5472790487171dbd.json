@@ -1,0 +1,211 @@
+{
+  "requestCount": 25,
+  "failedCount": 0,
+  "spaFallbackCount": 1,
+  "abortedCount": 6,
+  "avgMs": 35,
+  "p95Ms": 253,
+  "maxMs": 307,
+  "requests": [
+    {
+      "url": "https://www.saucedemo.com/",
+      "method": "GET",
+      "resourceType": "document",
+      "status": 200,
+      "ttfbMs": 52,
+      "durationMs": 52
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/index-aSZoiKGF.css",
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "status": 200,
+      "ttfbMs": 23,
+      "durationMs": 23
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/index-D3OxT1jE.js",
+      "method": "GET",
+      "resourceType": "script",
+      "status": 200,
+      "ttfbMs": 19,
+      "durationMs": 40
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/sauce-backpack-1200x1500-CjRW-Djj.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": 11,
+      "durationMs": 11
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/bike-light-1200x1500-DxcZRFOA.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": null,
+      "ttfbMs": null,
+      "durationMs": 16
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/bolt-shirt-1200x1500-mR0ldpVS.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": null,
+      "ttfbMs": null,
+      "durationMs": 16
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/sauce-pullover-1200x1500-BfbI-PSd.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": null,
+      "ttfbMs": null,
+      "durationMs": 14
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/red-onesie-1200x1500-BrSuq0ic.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": null,
+      "ttfbMs": null,
+      "durationMs": 13
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/red-tatt-1200x1500-E-qp6aYf.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": null,
+      "ttfbMs": null,
+      "durationMs": 13
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/sauce-backpack-1200x1500-CjRW-Djj.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": null,
+      "durationMs": 2
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/bike-light-1200x1500-DxcZRFOA.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": 14,
+      "durationMs": 14
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/bolt-shirt-1200x1500-mR0ldpVS.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": 14,
+      "durationMs": 15
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/sauce-pullover-1200x1500-BfbI-PSd.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": 16,
+      "durationMs": 16
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/red-onesie-1200x1500-BrSuq0ic.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": 16,
+      "durationMs": 16
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/red-tatt-1200x1500-E-qp6aYf.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": null,
+      "ttfbMs": null,
+      "durationMs": 11
+    },
+    {
+      "url": "https://www.saucedemo.com/dynamic-catalog-spinner.html",
+      "method": "GET",
+      "resourceType": "document",
+      "status": 404,
+      "ttfbMs": 253,
+      "durationMs": 253
+    },
+    {
+      "url": "https://www.saucedemo.com/?/dynamic-catalog-spinner.html",
+      "method": "GET",
+      "resourceType": "document",
+      "status": 200,
+      "ttfbMs": 12,
+      "durationMs": 12
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/index-D3OxT1jE.js",
+      "method": "GET",
+      "resourceType": "script",
+      "status": 200,
+      "ttfbMs": null,
+      "durationMs": 5
+    },
+    {
+      "url": "https://www.saucedemo.com/icon-192x192.png",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": 307,
+      "durationMs": 307
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/bike-light-1200x1500-DxcZRFOA.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": null,
+      "durationMs": 2
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/bolt-shirt-1200x1500-mR0ldpVS.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": null,
+      "durationMs": 3
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/red-onesie-1200x1500-BrSuq0ic.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": null,
+      "durationMs": 3
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/sauce-backpack-1200x1500-CjRW-Djj.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": null,
+      "durationMs": 3
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/sauce-pullover-1200x1500-BfbI-PSd.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": null,
+      "durationMs": 2
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/red-tatt-1200x1500-E-qp6aYf.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": 13,
+      "durationMs": 13
+    }
+  ]
+}

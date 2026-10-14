@@ -1,0 +1,51 @@
+{
+  "requestCount": 5,
+  "failedCount": 0,
+  "spaFallbackCount": 0,
+  "abortedCount": 0,
+  "avgMs": 13,
+  "p95Ms": 37,
+  "maxMs": 37,
+  "requests": [
+    {
+      "url": "https://www.saucedemo.com/",
+      "method": "GET",
+      "resourceType": "document",
+      "status": 200,
+      "ttfbMs": 30,
+      "durationMs": 37
+    },
+    {
+      "url": "https://www.saucedemo.com/manifest.json",
+      "method": "GET",
+      "resourceType": "other",
+      "status": 200,
+      "ttfbMs": 2,
+      "durationMs": 3
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/index-aSZoiKGF.css",
+      "method": "GET",
+      "resourceType": "stylesheet",
+      "status": 200,
+      "ttfbMs": 2,
+      "durationMs": 3
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/index-D3OxT1jE.js",
+      "method": "GET",
+      "resourceType": "script",
+      "status": 200,
+      "ttfbMs": 2,
+      "durationMs": 16
+    },
+    {
+      "url": "https://www.saucedemo.com/assets/sl-404-Cq1a9k9X.jpg",
+      "method": "GET",
+      "resourceType": "image",
+      "status": 200,
+      "ttfbMs": 3,
+      "durationMs": 8
+    }
+  ]
+}
